@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+*{
+    font-family: 'Nunito', sans-serif;
+    margin:0; padding:0;
+  box-sizing: border-box;
+  outline: none; border:none;
+  text-decoration: none;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-evenly; */
+    background:#fff;
+    padding:0% 4%;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+header .logo{
+    display: flex;
+    flex-direction: row;
+    
+}
+header .logo img{
+    width: 80px;
+    height: 80px;
+    /* padding-right: 0px; */
+}
+header .logo span{
+    font-weight: bolder;
+    color:#666;
+    padding: 30px;
+    font-size: 40px;
+}
+header .navbar{
+    display: flex;
+    flex-direction: row;
+    margin-left: 400px;
+    /* justify-content: space-between; */
+}
+header .navbar a{
+    color: #666;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-left: 30px;
+    /* font-weight: bold; */
+}
+header .btn{
+    display: flex;
+    flex-direction: row;
+    margin-left: 25px;
+    
+}
+header .btn button{
+    padding:9px 20px;
+    margin-left: 30px;
+    border-radius: 10px;
+    font-size: 16px;
+    padding:9px 20px;
+    margin-left: 30px;
+    font-weight: bold;
+}
+header .btn #login{
+    color: rgb(121, 198, 229);
+    border:3px solid rgb(164, 162, 162);
+    cursor: pointer;
+}
+header .btn #sign{
+    color: rgb(121, 198, 229);
+    border:3px solid rgb(164, 162, 162);
+    cursor: pointer;
+}
+header .btn #profile{
+    color: rgb(121, 198, 229);
+    border:3px solid rgb(164, 162, 162);
+    cursor: pointer;
+}
+header .btn #login:hover{
+    background-color: rgb(121, 198, 229);
+    color: white;
+
+}
+header .btn #sign:hover{
+    background-color: rgb(121, 198, 229);
+    color:white;
+
+}
+.main{
+    position: relative;
+    top: 100px;
+}

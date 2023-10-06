@@ -1,0 +1,36 @@
+<!-- <p>home works!</p> -->
+<section class="productDisplay" id="productDisplay">
+    <h1 class="heading"> Our <span>products</span> </h1>
+    <div class="box-container">
+        <div class="box" *ngFor="let obj of itemDetailList" (click)="displayProductDetails(obj.itemId)">
+            <h3>{{obj.itemName}}</h3>
+            <img src="data:image/png;base64,{{obj.image}}"/>
+            <p>Price: {{obj.itemPrice}}</p>
+            <p>Coupon code: {{obj.couponCode}}</p>
+            <!-- <a href="#" class="btn">Buy Now</a>
+            <button class="btn" (click)="viewCart(obj.itemId)">Add to Cart</button> -->
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        <!-- (click)="displayProductDetails(obj.itemId)" -->
+        <!-- <div class="box">
+            <img src="assets/s3.jpg">
+            <h3>Fresh and organic</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex maiores rerum tempora magni consequuntur mollitia 
+                voluptatum distinctio saepe autem modi fugiat tempore non, consectetur doloremque dicta minima voluptatibus vero tenetur.</p>
+            <a href="#" class="btn">Read More</a>
+        </div> -->
+

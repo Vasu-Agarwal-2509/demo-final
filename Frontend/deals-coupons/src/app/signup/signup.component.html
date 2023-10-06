@@ -1,0 +1,65 @@
+<div>
+    <table>
+        <tr>
+            <td><label>Email</label></td>
+            <td><input type="text" required [(ngModel)]="authDetail.emailid"><br></td>
+        </tr>
+        <tr>
+            <td><label>Password</label></td>
+            <td><input type="password" required [(ngModel)]="authDetail.password"><br></td>
+        </tr>
+    </table>
+</div>
+
+<div *ngIf="isUserVerified; else elseBlockInDiv">
+    <table>
+        <tr>
+            <td><label>Name</label></td>
+            <td><input type="text" required [(ngModel)]="customerObj.name"><br></td>
+        </tr>
+        <tr>
+            <td><label>Phone Number</label></td>
+            <td><input type="text" required [(ngModel)]="customerObj.phoneNumber"><br></td>
+        </tr>
+        <tr>
+            <td><label>Address</label></td>
+            <td><input type="text" required [(ngModel)]="customerObj.address"><br></td>
+        </tr>
+        <tr>
+            <td><label>Total Amount</label></td>
+            <td><input type="number" required [(ngModel)]="customerObj.totalAmount"><br></td>
+        </tr>
+        <tr>
+            <td><label>Product Preferences</label></td>
+            <td><input type="checkbox" id="shoes" name="shoes" value="Shoes" (change)="shoesChecked($event);">
+                <label for="shoes"> Shoes</label>
+            <input type="checkbox" id="watches" name="watches" value="Watches" (change)="watchesChecked($event);">
+                <label for="watches"> Watches</label>
+            <input type="checkbox" id="mobile" name="mobile" value="Mobile" (change)="mobileChecked($event);">
+                <label for="mobile"> Mobile Phones</label></td>
+        </tr>
+        <tr>
+            <td><button type="submit" (click)="addUser()">Register</button></td>
+        </tr>
+    </table>
+    <!-- <p>{{ authDetail2 | json }}</p> -->
+</div>
+
+<ng-template #elseBlockInDiv>
+    <div>
+        <table>
+            <tr *ngIf="codeInput">
+                <td>Enter the 4-digit code</td>
+                <td><input type="text" required [(ngModel)]="verificationCode"></td>
+            </tr>
+            <tr *ngIf="buttonForSendingCode; else elseBlock">
+                <td><button type="submit" (click)="sendVerificationCode()">Send Code</button></td>
+            </tr>
+            <ng-template #elseBlock>
+                <tr>
+                    <td><button type="submit" (click)="verifyCode()">Verify Code</button></td>
+                </tr>
+            </ng-template>
+        </table>
+    </div>
+</ng-template>

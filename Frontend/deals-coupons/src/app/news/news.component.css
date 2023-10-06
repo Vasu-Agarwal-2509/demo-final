@@ -1,0 +1,143 @@
+/* *{
+    background-color: rgba(27, 31, 34, 0.85);
+} */
+.maindiv{
+    margin-top: 20%;
+    width: 70%;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url('https://img.freepik.com/free-vector/modern-sale-banner-template-with-fluid-shapes_1361-1389.jpg');
+    background-size: 100% 100%;
+    box-shadow: 1px 2px 10px 5px white;
+    animation: slider 2s ease-out infinite linear;
+}
+@keyframes slider{
+    5%{background-image: url('https://img.freepik.com/free-psd/shoes-sale-social-media-post-square-banner-template-design_505751-2948.jpg');
+        background-size: 100% 100%; }
+    40%{ background-image: url('https://img.freepik.com/free-vector/modern-black-friday-sale-banner-template-with-3d-background-red-splash_1361-1877.jpg');
+        background-size: 100% 100%;}
+    75%{ background-image: url('https://img.freepik.com/premium-psd/black-friday-sale-banner-social-media-post-instagram-template-red-background_534178-328.jpg');
+        background-size: 100% 100%;}
+}
+
+
+
+
+/* *{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.slider{
+    position: relative;
+    width: 100%;
+    background: #2c3e50;
+}
+
+.myslider{
+    height: 655px;
+    display: none;
+    overflow: hidden;
+}
+
+.prev, .next{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 50px;
+    padding: 15px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.1s;
+    user-select: none;
+}
+
+.prev:hover, .next:hover{
+    color: #3498db;
+}
+.next{
+    right: 0;
+}
+.dotsbox{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 20px;
+    cursor: pointer;
+}
+.dot{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.fade{
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade{
+    from {opacity: 0.8}
+    to {opacity: 1}
+}
+@keyframes fade{
+    from {opacity: 0.8}
+    to {opacity: 1}
+}
+
+.txt{
+    position: absolute;
+    color: #fff;
+    letter-spacing: 2px;
+    line-height: 35px;
+    top: 40%;
+    left: 15%;
+    -webkit-animation-name: posi;
+    -webkit-animation-duration: 2s;
+    animation-name: posi;
+    animation-duration: 2s;
+    z-index: 1;
+}
+@-webkit-keyframes posi{
+    from {left: 25%;}
+    to {left: 15%;}
+}
+@keyframes posi{
+    from {left: 25%;}
+    to {left: 15%;}
+}
+
+.txt h1{
+    color: #3498db;
+    font-weight: bold;
+    margin: 20px;
+}
+.txt p{
+    font-weight: bold;
+    font-size: 20px;
+}
+img{
+    transform: scale(1.5, 1.5);
+    -webkit-animation-name: zoomin;
+    -webkit-animation-duration: 40s;
+    animation-name: zoomin;
+    animation-duration: 40s;
+}
+@-webkit-keyframes zoomin{
+    from {transform: scale(1, 1);}
+    to {transform: scale(1.5, 1.5);}
+}
+@keyframes zoomin{
+    from {transform: scale(1, 1);}
+    to {transform: scale(1.5, 1.5);}
+} */

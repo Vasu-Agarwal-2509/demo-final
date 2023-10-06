@@ -1,0 +1,26 @@
+<header>
+  <!-- <a href="#" class="logo">D&C</a> -->
+  <div class="logo">
+    <!-- <img src="" alt="" srcset=""> -->
+    <span>D&C</span>
+  </div>
+
+  <nav class="navbar">
+    <a href="#" routerLink="/home">Home</a>
+    <a href="#" routerLink="/coupons">Coupons</a>
+    <a href="#" routerLink="/news">News</a>
+    <a href="#" routerLink="/aboutus">About Us</a>
+  </nav>
+  <div class="btn" *ngIf="isAuthenticated; else elseBlock">
+    <button id="profile" routerLink="/profile">Profile</button>
+  </div>
+  <ng-template #elseBlock>
+    <div class="btn">
+      <button id="login" routerLink="/login">Login</button>
+      <button id="sign" routerLink="/signup">Sign Up</button>
+    </div>
+  </ng-template>
+</header>
+<div class="main">
+  <router-outlet></router-outlet>
+</div>

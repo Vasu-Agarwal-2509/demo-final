@@ -1,0 +1,63 @@
+server:
+  port: 9090
+  
+spring:
+  application:
+    name: API-GATEWAY
+  
+    
+  cloud: 
+    gateway:
+      globalcors:
+        add-to-simple-url-handler-mapping: true
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:4200"
+            allowedHeaders:
+              - "Origin"
+              - "Content-Type"
+              - "Accept"
+              - "Authorization"
+              - "Referer"
+            allowedMethods:
+              - POST
+              - GET
+              - OPTIONS
+      routes:
+        - id: authentication-service
+          uri: http://localhost:8081
+          predicates:
+            - Path=/authService/**
+          filters:
+            - AuthenticationFilter
+            
+        - id: customer-service
+          uri: http://localhost:8082
+          predicates:
+            - Path=/customerService/** , /v3/api-docs/customerService
+          filters:
+            - AuthenticationFilter
+        
+        - id: items-service
+          uri: http://localhost:8083
+          predicates:
+            - Path=/itemService/** , /v3/api-docs/itemService
+          filters:
+            - AuthenticationFilter
+            
+        - id: cart-service
+          uri: http://localhost:8084
+          predicates:
+            - Path=/cartService/**
+          filters:
+            - AuthenticationFilter
+            
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin, RETAIN_FIRST
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true

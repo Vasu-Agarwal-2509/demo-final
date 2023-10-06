@@ -1,0 +1,22 @@
+<!-- <p>cart-service works!</p>
+<p>{{productListObj | json}}</p>  -->
+<section class="productDisplay" id="productDisplay">
+    <h1 class="heading">Items in Cart</h1>
+    <div class="box-container">
+        <div class="box" *ngFor="let obj of productListObj">
+            <h3>{{obj.itemName}}</h3>
+            <img src="data:image/png;base64,{{obj.image}}"/>
+            <p>Price: {{obj.itemPrice}}</p>
+            <p>Coupon code: {{obj.couponCode}}</p>
+            <button class="btn">Buy Now</button>
+            <!-- <a href="#" class="btn">Buy Now</a> -->
+            <button class="btn" (click)="removeProduct(obj.itemId)">Remove</button>
+        </div>
+        
+    </div>
+    <div>
+        <button class="btn1" (click)="calculateTotal()">Cart Total</button>
+        <h3>{{displayTotal}}</h3>
+    </div>
+    
+</section>

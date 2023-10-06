@@ -1,0 +1,12 @@
+.loginForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form {
+    width: 50%; /* adjust this value to control the form's width */
+}
+
+input {
+    width: 40%;
+}

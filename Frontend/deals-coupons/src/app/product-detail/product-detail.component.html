@@ -1,0 +1,19 @@
+<!-- <p>product-detail works!</p> -->
+<p>{{productObj | json}}</p>
+<div class="box">
+    <div class="image">
+        <img src="data:image/png;base64,{{productObj.image}}"/>
+    </div>
+    <div class="desc">
+        <h3>{{productObj.itemName}}</h3>
+        <p>{{productObj.description}}</p>
+        <p>{{productObj.rating}}</p>
+        <p>Price: {{productObj.itemPrice}}</p>
+        <p>Coupon code: {{productObj.couponCode}}</p>
+        <p>Products available in stock: {{productObj.inStock}}</p>
+        <p>Discount on coupon code: {{productObj.discountOnCouponCode}}</p>
+    </div>
+    <!-- <button class="btn" (click)="purchaseItem(productObj.itemId)">Buy Now</button> -->
+    <button class="btn" (click)="transactionDisplay()">Buy Now</button>
+    <button class="btn" (click)="viewCart(productObj.itemId)">Add to Cart</button>
+</div>

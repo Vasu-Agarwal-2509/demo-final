@@ -1,0 +1,6 @@
+<!-- <p>coupons works!</p> -->
+<!-- <p>{{couponList | json}}</p> -->
+<div *ngFor="let coupon of couponList">
+    <h3>{{coupon}}</h3>
+    <button (click)="redeemCoupon(coupon)">Redeem</button>
+</div>
